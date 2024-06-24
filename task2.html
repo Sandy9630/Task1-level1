@@ -1,0 +1,144 @@
+<!--1. Button that changes color when clicked:-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Changing Button</title>
+  <style>
+    .color-button {
+      background-color: blue;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-left: 180px;
+     
+    }
+
+    .color-button:hover{
+
+      background-color: orange;
+      color: black;
+    }
+    #ca{
+
+background-color: black;
+margin-top: 100px;
+color: white;
+padding-top:50px;
+text-align: center;
+}
+
+    #ins{
+        margin-top: 100px;
+        margin-left: 500px;
+        margin-right: 500px;
+        background-color: white;
+        color: black;
+    }
+    body{
+        background-color: black;
+        background-repeat: no-repeat;
+      background-size: cover;
+    }
+    h1{
+        text-align: center;
+    }
+    h3{
+        text-align: center;
+    }
+    #t{
+      background-color:black ;
+      color: white;
+    }
+    #b{
+
+  text-align: center;
+  margin-left: 100px;
+   width: 250px;
+   height: 30px;
+   background-color: blue;
+    }
+    #b:hover{
+        background-color: red;
+    }
+    input{
+        margin-left: 100px;
+        width: 250px;
+        height: 30px;
+        color: black;
+        background-color: white;
+    }
+  </style>
+</head>
+<body background="C:\Users\hp\Pictures\9c86af6f-da24-4777-a426-20dbe90d428a.jpeg">
+ <h1 id="t"> Button that changes color when clicked</h1>
+    <fieldset id="ins">
+    <h1>Instragram </h1>
+    <h3>Sign up to see photos and videos <br>from your friends.</h3><br>
+    <button id="b">Log in with Facebook</button>
+    <h3>----------------OR----------------</h3>
+    <input type="text" placeholder="Mobile Number or Email"><br><br>
+    <input type="text" placeholder="Full Name"><br><br>
+    <input type="text" placeholder="Username"><br><br>
+    <input type="password" placeholder="Password"><br><br>
+  <button class="color-button" onclick="changeColor()">Sign up</button><br>
+<h3>By signing up,you  agree to our <br> Terms,Data Policy and <br> Cookies Policy.</h3>
+  <script>
+    function changeColor() {
+      var button = document.querySelector('.color-button');
+      button.style.backgroundColor = 'red';
+    }
+  </script>
+    </fieldset>
+
+</body>
+</html>
+
+
+<!--2. Alert box with greeting message based on current time:
+javascript-->
+<script>
+  var now = new Date();
+  var hour = now.getHours();
+
+  if (hour < 12) {
+    alert("Good morning!");
+  } else if (hour < 18) {
+    alert("Good afternoon!");
+  } else {
+    alert("Good evening!");
+  }
+</script>
+
+
+<!--3. Basic calculator that adds two numbers:
+html-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+</head>
+<body>
+ 
+  <div id="cal">
+    <fieldset id="ca">
+      <h1>Calculate two numbers</h1>
+      Enter first number: &nbsp;&nbsp;&nbsp;
+  <input type="text" id="num1" placeholder="Enter first number"><br><br>
+  Enter second number:
+  <input type="text" id="num2" placeholder="Enter second number"><br><br>
+  <button onclick="addNumbers()">Add</button><br>
+  <p id="result"></p>
+</fieldset>
+  </div>
+
+  <script>
+    function addNumbers() {
+      var num1 = parseFloat(document.getElementById('num1').value);
+      var num2 = parseFloat(document.getElementById('num2').value);
+      var sum = num1 + num2;
+      document.getElementById('result').innerText = 'Result: ' + sum;
+    }
+  </script>
+</body>
+</html>
